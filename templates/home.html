@@ -52,16 +52,37 @@
                 </div>
             </div>
             <div class="row">
-                {% for service in services %}
+                
 
                     <div class="col-md-4 col-sm-4">
                         <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
-                            <i class="icon icon-wallet"></i>
-                            <h2>{{ service.name }}</h2>
-                            <p>{{ service.description }}</p>
+                            <div class="service"></div>
+                            <img src="media/service/front-end.png">
+                            <h2>FRONT-END DEVELOPMENT</h2>
+                            <p>I&#x27;ll create the UI/UX and everything you see so you can interact with it effortlessly. This visual part is called front-end development.</p>
                         </div>
                     </div>
-                {% endfor %}
+                
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
+                            <div class="service"></div>
+                            <img src="media/service/backend.png">
+                            <h2>BACK-END DEVELOPMENT</h2>
+                            <p>On the other hand, the back end is where everything happens, backstage. I&#x27;ll create the servers where your products are located and the underlying logic that governs the product’s functions and processes.</p>
+                        </div>
+                    </div>
+                
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
+                            <div class="service"></div>
+                            <img src="media/service/graphic.png">
+                            <h2>GRAPHIC DESIGN</h2>
+                            <p>I bring to life services ranging from New logo identity | Letterhead &amp; template for company’s electronic documents | Business cards | Graphic illustrations and concepts for corporate swag (mugs, pens, etc.)</p>
+                        </div>
+                    </div>
+                
             </div>
         </div>
     </div>
@@ -94,6 +115,34 @@
         </div>
     </div>
 
+    <!-- {#    Testimonials Section#}
+    <div id="testimonial" class="testimonial-area section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header">
+                        <h2>Client Says</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for client in clients %}
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                        <div class="gallery-items">
+                            <a class="view img" href="{{ client.image.url }}">
+                                <img src="{{ client.image.url }}" alt="client image">
+                            </a>
+
+                            <div class="gallery-text">
+                                <h2>{{ client.title }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> -->
+
     {#    Contact section#}
 
     <div class="invitation-area section-padding">
@@ -120,7 +169,8 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 box-contact-form">
 
-                    <form id="contact-form" method="post" action="#">
+                    <form id="" method="post">
+                        {% csrf_token %}
 
                         <div class="messages"></div>
 
@@ -154,7 +204,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <button class="btn btn-send" value="">Send message</button>
+                                    <button class="btn btn-send" value="Send Message">Send message</button>
                                 </div>
                             </div>
                         </div>
